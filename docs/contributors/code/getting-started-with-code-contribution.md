@@ -10,7 +10,6 @@ We recommend using the [Node Version Manager](https://github.com/nvm-sh/nvm) (nv
 
 After installing Node, you can build Gutenberg by running the following from within the cloned repository:
 
-
 ```bash
 npm ci
 npm run build
@@ -58,12 +57,11 @@ npm run wp-env destroy
 
 Explore the [package documentation](/packages/env/README.md) for additional commands.
 
-
 #### Accessing the Local WordPress Install
 
 The WordPress installation should now be available at `http://localhost:8888`
 
-You can access the Dashboard at: `http://localhost:8888/wp-admin/` using **Username**: `admin`, **Password**: `password`.  You'll notice the Gutenberg plugin installed and activated, this is your local build.
+You can access the Dashboard at: `http://localhost:8888/wp-admin/` using **Username**: `admin`, **Password**: `password`. You'll notice the Gutenberg plugin installed and activated, this is your local build.
 
 #### Troubleshooting
 
@@ -91,9 +89,9 @@ WP_BASE_URL=http://localhost:8888/gutenberg npm run test-e2e
 
 You'll need to disable OPCache in order to correctly work on PHP files. To fix:
 
-- Go to **MAMP > Preferences > PHP**
-- Under **Cache**, select **off**
-- Confirm with **OK**
+-   Go to **MAMP > Preferences > PHP**
+-   Under **Cache**, select **off**
+-   Confirm with **OK**
 
 #### Incoming connections
 
@@ -101,20 +99,20 @@ By default, the web server (Apache) launched by MAMP will listen to all incoming
 
 While it is possible to fix this, you should fix it at your own risk, since it breaks MAMP's ability to parse web server configurations and, as a result, makes MAMP think that Apache is listening to the wrong port. Consider switching away from MAMP. Otherwise, you can use the following:
 
-- Edit `/Applications/MAMP/conf/apache/httpd.conf`
-- Change `Listen 8888` to `Listen 127.0.0.1:8888`
+-   Edit `/Applications/MAMP/conf/apache/httpd.conf`
+-   Change `Listen 8888` to `Listen 127.0.0.1:8888`
 
 #### Linking to other directories
 
 You may like to create links in your `plugins` and `themes` directories to other folders, e.g.
 
-- wp-content/plugins/gutenberg -> ~/projects/gutenberg
-- wp-content/themes/twentytwenty -> ~/projects/twentytwenty
+-   wp-content/plugins/gutenberg -> ~/projects/gutenberg
+-   wp-content/themes/twentytwenty -> ~/projects/twentytwenty
 
 If so, you need to instruct Apache to allow following such links:
 
-- Open or start a new file at `/Applications/MAMP/htdocs/.htaccess`
-- Add the following line: `Options +SymLinksIfOwnerMatch`
+-   Open or start a new file at `/Applications/MAMP/htdocs/.htaccess`
+-   Add the following line: `Options +SymLinksIfOwnerMatch`
 
 #### Using WP-CLI
 
@@ -164,7 +162,7 @@ With the extension installed, ESLint will use the [.eslintrc.js](https://github.
 
 [Prettier](https://prettier.io/) is a tool that allows you to define an opinionated format, and automate fixing the code to match that format. Prettier and ESlint are similar, Prettier is more about formatting and style, while ESlint is for detecting coding errors.
 
-To use Prettier with Visual Studio Code, you should install the [Prettier - Code formatter extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode). You can then configure it to be the default formatter and to automatically fix issues on save, by adding the following to your settings. __**Note**: depending on where you are viewing this document, the brackets may show as double, the proper format is just a single bracket.__
+To use Prettier with Visual Studio Code, you should install the [Prettier - Code formatter extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode). You can then configure it to be the default formatter and to automatically fix issues on save, by adding the following to your settings. **_Note_: depending on where you are viewing this document, the brackets may show as double, the proper format is just a single bracket.**
 
 ```json
 "[[javascript]]": {
